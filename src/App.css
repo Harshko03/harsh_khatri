@@ -1,0 +1,9 @@
+@import "tailwindcss";
+@font-face {
+  font-family: "departure";
+  src: url(assets/DepartureMono-Regular.woff2);
+}
+*{
+  font-family: "departure";
+
+}
