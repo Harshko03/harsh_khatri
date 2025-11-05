@@ -1,23 +1,24 @@
-
 import Scrambled from "./component/Scramble";
 import "./App.css";
-import image from "./assets/oki.gif";
+import image from "../public/proff.png";
+
+import RetroResume from "./component/Retro";
 
 function App() {
+  
+
   return (
-    <div className="absolute top-0 z-[-2] min-h-screen w-screen bg-neutral-950 bg-[radial-gradient(ellipse_80%_80%_at_50%_-20%,rgba(120,119,198,0.3),rgba(255,255,255,0))]">
+    <div className="absolute top-0 z-[-2] min-h-[200vh] w-screen bg-neutral-950">
       <div className="flex flex-col justify-center mt-20 items-center text-white space-y-8 md:space-y-12 max-w-2xl mx-auto w-full px-6 text-xl">
-        <div className="flex justify-center items-center">
+        <div className="flex md:space-y-2 justify-center items-center">
           <img src={image} alt="No" className="w-48 h-50 rounded-2xl mr-5" />
           <div>
-            <p>
+            <div>
               Hey I’m{" "}
-              <span className="bg-gray-700">
-                <Scrambled text="Harsh Khatri" />
-              </span>
+           <span><RetroResume/></span>
               , and I’m passionate about making software that solves real-world
               problems.
-            </p>
+            </div>
             <br />
             <p>
               {" "}
@@ -106,17 +107,17 @@ function App() {
                     </tr>
                     <tr className="border-gray-950 dark:border-gray-300">
                       <td className="border-r border-gray-950 dark:border-gray-300 max-w-0 p-2 font-normal">
-                        POS Restaurant Management System
+                        <a href="">POS Restaurant Management System</a>
                       </td>
                     </tr>
                     <tr className="border-gray-950 dark:border-gray-300">
                       <td className="border-r border-gray-950 dark:border-gray-300 max-w-0 p-2 font-normal">
-                        Restaurant Management
+                        <a href="">Restaurant Management</a>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <div className="h-8 block relative -top-px dark:invert z-[-1] bg-[url('./assets/tbottom.svg')] bg-repeat-x bg-auto"></div>
+                <div className="h-8 block relative -top-px dark:invert z-[-1] bg-[url('../public/tbottom.svg')] bg-repeat-x bg-auto"></div>
               </div>
             </div>
           </div>
@@ -133,14 +134,26 @@ function App() {
             </div>
             <div className="space-y-8">
               <ul className="space-y-3">
-                <li className="flex flex-col">GitHub</li>
-                <li className="flex flex-col">LinkedIn</li>
-                <li className="flex flex-col">Instagram</li>
-                <li className="flex flex-col">Email</li>
+                <li className="flex flex-col">
+                  <a href="https://github.com/Harshko03">GitHub</a>
+                </li>
+                <li className="flex flex-col">
+                  <a href="https://www.linkedin.com/in/harsh-khatri-999b25250">LinkedIn</a>
+                </li>
+                <li className="flex flex-col">
+                  <a href="https://www.instagram.com/harsh_.k3/">Instagram</a>
+                </li>
+                <li className="flex flex-col">
+                  <a href="mailto:hkharshkhatri123@gmail.com">Email</a>
+                </li>
               </ul>
             </div>
           </div>
         </section>
+
+        <div>
+          <RetroResume />
+        </div>
       </div>
     </div>
   );
