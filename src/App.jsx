@@ -11,7 +11,7 @@ function App() {
     <div className="absolute top-0 z-[-2] min-h-[200vh] w-screen bg-neutral-950">
       <div className="flex flex-col justify-center mt-20 items-center text-white space-y-8 md:space-y-12 max-w-2xl mx-auto w-full px-6 text-xl">
         <div className="flex md:space-y-2 justify-center items-center">
-          <img src={image} alt="No" className="w-48 h-50 rounded-2xl mr-5" />
+          <img src={image} alt="No" className="w-32 sm:w-48 h-50 rounded-2xl mr-5" />
           <div>
             <div>
               Hey I’m{" "}
@@ -100,7 +100,7 @@ function App() {
                   <tbody>
                     <tr className="border-gray-950 dark:border-gray-300">
                       <td className="border-r border-gray-950 dark:border-gray-300 max-w-0 p-2 font-normal">
-                        <a href="" className="">
+                        <a href="https://pass-op-ghtd.vercel.app/" target="_blank">
                           Password Manager
                         </a>
                       </td>

@@ -29,7 +29,7 @@ export default function RetroResume() {
         <div
           className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2
                      bg-gray-200 border-4 border-gray-700 shadow-lg
-                     w-[500px] h-[400px] flex flex-col z-50"
+                     w-[400px] h-[400px] md:w-[500px] flex flex-col z-50"
         >
           <div className="bg-gray-800 text-white flex justify-between items-center p-2">
             <span>📄 My Resume</span>
