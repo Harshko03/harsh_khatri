@@ -15,7 +15,7 @@ function App() {
           <div>
             <div>
               Hey I’m{" "}
-           <span><RetroResume/></span>
+          <RetroResume/>
               , and I’m passionate about making software that solves real-world
               problems.
             </div>
@@ -150,10 +150,6 @@ function App() {
             </div>
           </div>
         </section>
-
-        <div>
-          <RetroResume />
-        </div>
       </div>
     </div>
   );

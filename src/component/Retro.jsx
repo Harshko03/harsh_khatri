@@ -1,15 +1,15 @@
 import { useState } from "react";
-import { Document, Page, pdfjs } from "react-pdf";
+import { Document, Page, pdfjs as PDFJS } from "react-pdf";
 import "react-pdf/dist/Page/TextLayer.css";
 import "react-pdf/dist/Page/AnnotationLayer.css";
 import Scrambled from "./Scramble";
 
-// ✅ Correct worker for Vite
-import workerSrc from "pdfjs-dist/build/pdf.worker.min.mjs?url";
-pdfjs.GlobalWorkerOptions.workerSrc = workerSrc;
-
-// ✅ Optional: silence harmless font warnings
-pdfjs.verbosity = 0;
+// ✅ Worker for Vercel & Vite builds
+PDFJS.GlobalWorkerOptions.workerSrc = new URL(
+  "pdfjs-dist/build/pdf.worker.min.mjs",
+  import.meta.url
+).toString();
+PDFJS.GlobalWorkerOptions.verbosity = PDFJS.VerbosityLevel.errors;
 
 export default function RetroResume() {
   const [showResume, setShowResume] = useState(false);
@@ -31,7 +31,6 @@ export default function RetroResume() {
                      bg-gray-200 border-4 border-gray-700 shadow-lg
                      w-[500px] h-[400px] flex flex-col z-50"
         >
-          {/* Header */}
           <div className="bg-gray-800 text-white flex justify-between items-center p-2">
             <span>📄 My Resume</span>
             <button
@@ -42,10 +41,9 @@ export default function RetroResume() {
             </button>
           </div>
 
-          {/* PDF View */}
           <div className="bg-white flex-1 overflow-auto p-2 text-black">
             <Document
-              file="/reshk.pdf"  // ✅ your resume
+              file="/reshk.pdf"
               onLoadSuccess={onDocumentLoadSuccess}
               onLoadError={(err) => console.error("❌ PDF error:", err)}
             >
