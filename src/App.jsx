@@ -89,35 +89,40 @@ function App() {
               <p>my projects are fun — just the way I like them.</p>
 
               <div className="flex flex-col relative">
-                <table className="border border-b-8 border-b-gray-950 dark:border-b-white border-gray-950 dark:border-white table-auto w-full bg-white dark:bg-neutral-950">
+                <table className="border border-b-8  border-white table-auto w-full bg-neutral-950">
                   <thead>
-                    <tr className="border-b border-gray-950 dark:border-gray-300">
+                    <tr className="border-b border-gray-300">
                       <th className="font-normal text-left p-2 w-3/4">
                         Projects
                       </th>
                     </tr>
                   </thead>
                   <tbody>
-                    <tr className="border-gray-950 dark:border-gray-300">
-                      <td className="border-r border-gray-950 dark:border-gray-300 max-w-0 p-2 font-normal">
+                    <tr >
+                      <td className="border-r max-w-0 p-2 font-normal">
                         <a href="https://pass-op-ghtd.vercel.app/" target="_blank">
                           Password Manager
                         </a>
                       </td>
                     </tr>
-                    <tr className="border-gray-950 dark:border-gray-300">
-                      <td className="border-r border-gray-950 dark:border-gray-300 max-w-0 p-2 font-normal">
+                    <tr >
+                      <td className="border-r max-w-0 p-2 font-normal">
                         <a href="">POS Restaurant Management System</a>
                       </td>
                     </tr>
-                    <tr className="border-gray-950 dark:border-gray-300">
-                      <td className="border-r border-gray-950 dark:border-gray-300 max-w-0 p-2 font-normal">
+                    <tr >
+                      <td className="border-r max-w-0 p-2 font-normal">
                         <a href="">Restaurant Management</a>
+                      </td>
+                    </tr>
+                    <tr >
+                      <td className="border-r max-w-0 p-2 font-normal">
+                        <a href="https://old1-nine.vercel.app/" target="_blank">Old 1's</a>
                       </td>
                     </tr>
                   </tbody>
                 </table>
-                <div className="h-8 block relative -top-px dark:invert z-[-1] bg-[url('../public/tbottom.svg')] bg-repeat-x bg-auto"></div>
+                <div className="h-8 block relative -top-px invert z-[-1] bg-[url('../public/tbottom.svg')] bg-repeat-x bg-auto"></div>
               </div>
             </div>
           </div>
